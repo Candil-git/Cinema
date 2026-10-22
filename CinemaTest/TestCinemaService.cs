@@ -40,7 +40,7 @@ namespace CinemaTest
         {
             var serviceProvider = ConfigureServices();
             var generoService = serviceProvider.GetService<IBaseService<Genero>>();
-            var genero = new Genero { Id = 4, Nome = "Romance" };
+            var genero = new Genero { Id = 1, Nome = "Terror" };
             var result = generoService.Create<Genero, Genero, GeneroValidator>(genero);
                 Console.WriteLine(JsonSerializer.Serialize(result));
         }
