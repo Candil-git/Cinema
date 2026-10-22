@@ -1,0 +1,16 @@
+﻿using FluentValidation;
+using CinemaDomain;
+
+namespace CinemaService.Validators
+{
+    public class GeneroValidator : AbstractValidator<Genero>
+    {
+        public GeneroValidator()
+        {
+            RuleFor(g => g.Nome)
+                .NotEmpty().WithMessage("Gênero deve ser informado!")
+                .NotNull().WithMessage("Gênero deve ser informado!")
+                .Length(10, 50).WithMessage("Gênero deve conter entre 5 e 50 caracteres");
+        }
+    }
+}
