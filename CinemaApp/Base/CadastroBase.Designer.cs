@@ -142,6 +142,7 @@
             dataGridView.ReadOnly = true;
             dataGridView.Size = new Size(696, 369);
             dataGridView.TabIndex = 3;
+            
             // 
             // btnExcluir
             // 
@@ -226,7 +227,6 @@
             DrawerTabControl = TabControlCadastro;
             Name = "CadastroBase";
             Text = "Cadastro Base";
-            Load += CadastroBase_Load;
             TabControlCadastro.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);
             tabPageCadastro.PerformLayout();

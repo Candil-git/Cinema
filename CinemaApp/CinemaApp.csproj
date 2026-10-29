@@ -17,4 +17,8 @@
     <ProjectReference Include="..\CinemaService\CinemaService.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Config\" />
+  </ItemGroup>
+
 </Project>

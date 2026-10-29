@@ -18,9 +18,9 @@ namespace CinemaApp.Base
             InitializeComponent();
         }
 
-        private void CadastroBase_Load(object sender, EventArgs e)
+        protected void CarregarGrid()
         {
-
+            throw new NotImplementedException();
         }
 
         protected virtual void Salvar()
@@ -39,6 +39,37 @@ namespace CinemaApp.Base
             }
         }
 
+        protected virtual void Novo()
+        {
+            LimparCampos();
+            TabControlCadastro.SelectedIndex = 0;
+            tabPageCadastro.Focus();
+        }
+
+        protected virtual void Editar()
+        {
+            if (dataGridView.SelectedRows.Count > 0)
+
+            {
+                var id = (int)dataGridView.SelectedRows[0].Cells[0].Value;
+                CarregarRegistro(id);
+                TabControlCadastro.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um registro para editar!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        protected virtual void Deletar(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected virtual void CarregarRegistro(int id)
+        {
+            throw new NotSupportedException();
+        }
         private void LimparCampos()
         {
             IsEditMode = false;
@@ -84,6 +115,11 @@ namespace CinemaApp.Base
             {
                 MessageBox.Show("Selecione um registro para excluir!", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void tabPageConsultar_Enter(object sender, EventArgs e)
+        {
+            CarregarGrid();
         }
     }
 }
