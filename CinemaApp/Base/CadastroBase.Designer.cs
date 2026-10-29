@@ -142,7 +142,6 @@
             dataGridView.ReadOnly = true;
             dataGridView.Size = new Size(696, 369);
             dataGridView.TabIndex = 3;
-            
             // 
             // btnExcluir
             // 
@@ -237,9 +236,6 @@
         }
 
         #endregion
-
-        private ReaLTaiizor.Controls.MaterialTabControl TabControlCadastro;
-        private TabPage tabPageCadastro;
         private TabPage tabPageConsulta;
         private ImageList imageList1;
         private ReaLTaiizor.Controls.MaterialButton btnSalvar;
@@ -248,5 +244,7 @@
         private ReaLTaiizor.Controls.MaterialButton btnEditar;
         private ReaLTaiizor.Controls.MaterialButton btnNovo;
         private DataGridView dataGridView;
+        protected TabPage tabPageCadastro;
+        protected ReaLTaiizor.Controls.MaterialTabControl TabControlCadastro;
     }
 }

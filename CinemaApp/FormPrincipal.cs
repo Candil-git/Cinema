@@ -8,5 +8,10 @@ namespace CinemaApp
         {
             InitializeComponent();
         }
+
+        private void generoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var cadastroGenero = ConfigureServiceProvider.Get
+        }
     }
 }

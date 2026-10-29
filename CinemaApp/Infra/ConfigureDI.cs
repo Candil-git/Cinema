@@ -11,7 +11,7 @@ using System.Text;
 
 namespace CinemaApp.Infra
 {
-    public class ConfigureDI
+    public static class ConfigureDI
     {
         public static ServiceCollection Services;
         public static IServiceProvider ServiceProvider;
@@ -23,7 +23,7 @@ namespace CinemaApp.Infra
             Services.AddScoped<IBaseRepository<Genero>, BaseRepository < Genero >> ();
             Services.AddScoped<IBaseService<Genero>, BaseService<Genero>>();
 
-            var strCon = File.ReadAllText("Config/ConfigBD.txt");
+            var strCon = File.ReadAllText("Config/ConfigDB.txt");
             
             Services.AddDbContext<MyDBContext>(options => options.UseNpgsql(strCon));
 
