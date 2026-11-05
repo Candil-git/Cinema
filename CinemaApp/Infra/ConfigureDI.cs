@@ -47,12 +47,13 @@ namespace CinemaApp.Infra
                 cfg.CreateMap<Sessao, Sessao>();
                 cfg.CreateMap<Ingresso, Ingresso>();
             },NullLoggerFactory.Instance).CreateMapper());
-
             #endregion
 
+            #region Serviços de Injeção de Dependência dos Formulários 
             Services.AddTransient<CadastroGenero,CadastroGenero>();
 
             ServiceProvider = Services.BuildServiceProvider();
+            #endregion
         }
     }
 }

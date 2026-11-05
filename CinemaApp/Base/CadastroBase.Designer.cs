@@ -58,7 +58,7 @@
             tabControlCadastro.Multiline = true;
             tabControlCadastro.Name = "tabControlCadastro";
             tabControlCadastro.SelectedIndex = 0;
-            tabControlCadastro.Size = new Size(536, 308);
+            tabControlCadastro.Size = new Size(594, 333);
             tabControlCadastro.TabIndex = 0;
             // 
             // tabPageCadastro
@@ -69,7 +69,7 @@
             tabPageCadastro.Location = new Point(4, 24);
             tabPageCadastro.Name = "tabPageCadastro";
             tabPageCadastro.Padding = new Padding(3);
-            tabPageCadastro.Size = new Size(528, 280);
+            tabPageCadastro.Size = new Size(586, 305);
             tabPageCadastro.TabIndex = 0;
             tabPageCadastro.Text = "Cadastro";
             tabPageCadastro.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             btnSalvar.HighEmphasis = true;
             btnSalvar.Icon = null;
             btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnSalvar.Location = new Point(445, 235);
+            btnSalvar.Location = new Point(503, 260);
             btnSalvar.Margin = new Padding(4, 6, 4, 6);
             btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnSalvar.Name = "btnSalvar";
@@ -105,7 +105,7 @@
             btnCancelar.HighEmphasis = true;
             btnCancelar.Icon = null;
             btnCancelar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnCancelar.Location = new Point(341, 235);
+            btnCancelar.Location = new Point(399, 260);
             btnCancelar.Margin = new Padding(4, 6, 4, 6);
             btnCancelar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnCancelar.Name = "btnCancelar";
@@ -223,9 +223,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(542, 375);
+            ClientSize = new Size(600, 400);
             Controls.Add(tabControlCadastro);
             DrawerTabControl = tabControlCadastro;
+            MinimumSize = new Size(600, 400);
             Name = "CadastroBase";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CadastroBase";
@@ -247,7 +248,7 @@
         protected TabPage tabPageCadastro;
         protected ReaLTaiizor.Controls.MaterialTabControl tabControlCadastro;
         protected DataGridView dataGridViewConsulta;
-        protected ReaLTaiizor.Controls.MaterialButton btnSalvar;
-        protected ReaLTaiizor.Controls.MaterialButton btnCancelar;
+        private ReaLTaiizor.Controls.MaterialButton btnSalvar;
+        private ReaLTaiizor.Controls.MaterialButton btnCancelar;
     }
 }

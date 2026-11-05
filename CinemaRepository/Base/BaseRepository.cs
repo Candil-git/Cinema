@@ -34,7 +34,17 @@ namespace CinemaRepository.Base
 
         public void Update(TypeEntity entity)
         {
-            _myDBContext.Entry(entity).State = EntityState.Modified;
+            var localEntity = _myDBContext.Set<TypeEntity>().Local.FirstOrDefault(existingEntity => existingEntity.Id == entity.Id);
+
+            if(localEntity is not null)
+            {
+                _myDBContext.Entry(localEntity).CurrentValues.SetValues(entity);
+                _myDBContext.Entry(localEntity).State = EntityState.Modified;
+            }
+            else
+            {
+                _myDBContext.Entry(entity).State = EntityState.Modified;
+            }
             _myDBContext.SaveChanges();
         }
 

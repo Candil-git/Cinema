@@ -38,23 +38,8 @@
             // 
             tabPageCadastro.Controls.Add(txtNome);
             tabPageCadastro.Controls.Add(txtId);
-            tabPageCadastro.Size = new Size(424, 189);
-            tabPageCadastro.Controls.SetChildIndex(btnCancelar, 0);
-            tabPageCadastro.Controls.SetChildIndex(btnSalvar, 0);
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
             tabPageCadastro.Controls.SetChildIndex(txtNome, 0);
-            // 
-            // tabControlCadastro
-            // 
-            tabControlCadastro.Size = new Size(432, 217);
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.Location = new Point(341, 144);
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(237, 144);
             // 
             // txtId
             // 
@@ -68,7 +53,7 @@
             txtId.HideSelection = true;
             txtId.Hint = "Id";
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(22, 20);
+            txtId.Location = new Point(23, 28);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -99,7 +84,7 @@
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
-            txtNome.Location = new Point(22, 74);
+            txtNome.Location = new Point(23, 95);
             txtNome.MaxLength = 32767;
             txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtNome.Name = "txtNome";
@@ -111,7 +96,7 @@
             txtNome.SelectionLength = 0;
             txtNome.SelectionStart = 0;
             txtNome.ShortcutsEnabled = true;
-            txtNome.Size = new Size(395, 48);
+            txtNome.Size = new Size(557, 48);
             txtNome.TabIndex = 3;
             txtNome.TabStop = false;
             txtNome.TextAlign = HorizontalAlignment.Left;
@@ -122,7 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(438, 284);
+            ClientSize = new Size(600, 400);
             Location = new Point(0, 0);
             Name = "CadastroGenero";
             Text = "CadastroGenero";
